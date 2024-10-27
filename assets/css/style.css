@@ -1,0 +1,203 @@
+*{
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+ color: #000000;
+ display: grid;
+ grid-template-areas: "aside" "search" "main" "footer";
+ grid-template-rows: 8% 10% auto 8%;
+ min-height: 100vh;
+}
+
+
+i{
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}
+
+
+.menu{
+  display: none;
+  list-style-type: none;
+}
+
+
+aside{
+  grid-area: aside;
+  background-color: #8ba85b;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.contenedor-search{
+  grid-area: search;
+  background-color: #93b896;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border: 0.5rem;
+}
+
+
+select{
+  width: 80%;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+
+label{
+ font-size: 1rem;
+ font-weight: bold;
+ margin-top: 0.5rem;
+}
+
+
+main{
+  grid-area: main;
+  background-color: rgb(118, 156, 116);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+}
+
+
+.cardmobil{
+  border: 0.1rem  solid #1d2627;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+  height: 15rem;
+  width: 20rem;
+}
+
+
+.info{
+  display: flex;
+  margin-top: 0.5rem;
+  padding-bottom: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  margin-left: 2rem;
+  background-color: #3c9950;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.cardmobil img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+.carddesk{
+  display: none;
+}
+
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.pagination a{
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: 0.2rem solid #293a2e;
+  border-radius: 1rem;
+  color: rgb(0, 0, 0);
+  margin:0.5rem;
+  margin-top: 3rem;
+}
+
+.pagination a.active{
+  background-color: rgb(46, 75, 55);
+  color: beige;
+}
+
+footer{
+  grid-area: footer;
+  display: flex;
+  background-color: #6c8741;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+@media (min-width: 576px){
+
+body{
+  grid-template-areas:
+  "aside search"
+  "aside main"
+  "footer main";
+  grid-template-columns: 15% auto;
+  grid-template-rows: 8% auto 10%;
+
+}
+
+aside{
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+
+.bars{
+  display: none;
+}
+
+/* contenedor */
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    width: 100%;
+  }
+  /* card */
+  .card{
+    border-radius: 10px;
+    min-height: 200px;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    gap: 20px;
+  }
+
+.cardmobil{
+  display: none;
+}
+
+}
