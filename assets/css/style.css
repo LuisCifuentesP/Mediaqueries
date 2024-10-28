@@ -177,6 +177,25 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+.contenedor-search{
+  height: 6rem;;
+}
+
+select{
+  display: flex;
+  margin: 30px ;
+  padding: 10px 10px;
+  font-size:large;
+}
+
+label{
+  margin-top: 2rem;
+  font-size:large;
+  font-weight: 500;
+}
+
+
 aside{
   justify-content: flex-start;
   flex-direction: column;
@@ -202,12 +221,11 @@ menu li{
 }
 
 
-
 .cards {
     grid-area: cards;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-row: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
 }
 
 .card {
@@ -218,28 +236,26 @@ menu li{
   font-weight: bold;
   padding: 40px;
   margin: 10px;
-  width: calc(33.33% - 20px);
-  background-color: #ffffff;
+  width: 450px;
+  background-color: #88a94e;
 }
 
 article p{
  justify-content: center;
+ margin-top: 2rem;
 }
 
 button{
   justify-content: center;
   align-items: center;
   margin-right: 1rem;
+  cursor: pointer;
 }
 .cardmobil {
   display: none;
 }
 
-select{
-  display: flex;
-  margin: 30px ;
-  padding: 10px 10px;
-}
+
 
 footer{
   grid-area: footer;
@@ -248,6 +264,6 @@ footer{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem;}
+  padding: 1.5rem;}
 
 }
