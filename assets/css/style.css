@@ -114,9 +114,8 @@ button{
   width: 100%;
 }
 
-
-.card{
-  display: none;
+body{
+  overflow-y: scroll;
 }
 
 article p{
@@ -169,6 +168,7 @@ body{
   grid-template-rows: 8% auto 10%;
 
 }
+
 
 .logo{
   display: flex;
