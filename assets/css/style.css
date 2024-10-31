@@ -1,4 +1,4 @@
-*{
+/* *{
   margin: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -114,9 +114,6 @@ button{
   width: 100%;
 }
 
-body{
-  overflow-y: scroll;
-}
 
 article p{
   display: flex;
@@ -266,4 +263,251 @@ footer{
   align-items: center;
   padding: 1.5rem;}
 
+} */
+
+
+* { 
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  color: #000000;
+  display: grid;
+  grid-template-areas: "aside" "search" "main" "footer";
+  grid-template-rows: 8% 10% auto 8%;
+  min-height: 100vh;
+}
+
+i {
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}
+
+.menu {
+  display: none;
+  list-style-type: none;
+}
+
+aside {
+  grid-area: aside;
+  background-color: #8ba85b;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedor-search {
+  grid-area: search;
+  background-color: #93b896;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+select {
+  width: 80%;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+
+main {
+  grid-area: main;
+  background-color: #769c74;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card{
+  display: none;
+}
+
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card, .cardmobil {
+  width: 90%;
+  max-width: 450px;
+}
+
+.card img, .cardmobil img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.info {
+  display: flex;
+  margin-top: 0.5rem;
+  padding-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin-left: 2rem;
+  background-color: #299d42;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.cardmobil img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+article p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.pagination a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: 0.2rem solid #293a2e;
+  border-radius: 1rem;
+  color: rgb(0, 0, 0);
+  margin: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pagination a.active {
+  background-color: #2e4b37;
+  color: beige;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  background-color: #6c8741;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+@media (min-width: 576px) {
+  body {
+    grid-template-areas: "aside search" "aside main" "footer main";
+    grid-template-columns: 15% auto;
+    grid-template-rows: 8% auto 10%;
+  }
+
+  .logo {
+    display: flex;
+    padding-top: 1.5rem;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenedor-search {
+    height: 6rem;
+  }
+
+  select {
+    display: flex;
+    margin: 30px;
+    padding: 10px;
+    font-size: large;
+  }
+
+  label {
+    margin-top: 2rem;
+    font-size: large;
+    font-weight: 500;
+  }
+
+  aside {
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .menu {
+    display: contents;
+    justify-content: center;
+    align-items: center;
+  }
+
+  menu li {
+    margin-top: 3rem;
+    line-height: 4rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: #323633;
+  }
+
+  .bars {
+    display: none;
+  }
+
+  .cards {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    min-height: 200px;
+    font-weight: bold;
+    padding: 40px;
+    background-color: #88a94e;
+  }
+
+  article p {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  button {
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  .cardmobil {
+    display: none;
+  }
 }
